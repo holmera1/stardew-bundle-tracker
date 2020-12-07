@@ -1,0 +1,396 @@
+{
+    "crafts1": {
+        "items": [
+            {
+                "name": "Wild Horseradish",
+                "source": "Spring foraging",
+                "obtained": false
+            },
+            {
+                "name": "Daffodil",
+                "source": "Spring foraging, buy from Pierre at Flower Dance",
+                "obtained": false
+            },
+            {
+                "name": "Leek",
+                "source": "Spring foraging",
+                "obtained": false
+            },
+            {
+                "name": "Dandelion",
+                "source": "Spring foraging, buy from Pierre at Flower Dance",
+                "obtained": false
+            }
+        ],
+        "reward": "Spring Seeds (30)",
+        "count": 4,
+        "img": "Parsnip"
+    },
+    "crafts2": {
+        "items": [
+            {
+                "name": "Grape",
+                "source": "Summer foraging, Fall farming",
+                "obtained": false
+            },
+            {
+                "name": "Spice Berry",
+                "source": "Summer foraging, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Sweet Pea",
+                "source": "Summer foraging",
+                "obtained": false
+            }
+        ],
+        "reward": "Summer Seeds (30)",
+        "count": 3,
+        "img": "Parsnip"
+    },
+    "crafts3": {
+        "items": [
+            {
+                "name": "Common Mushroom",
+                "source": "Fall foraging, Spring & Fall foraging in Secret Woods, The Farm Cave (mushroom option)",
+                "obtained": false
+            },
+            {
+                "name": "Wild Plum",
+                "source": "Fall foraging, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Hazelnut",
+                "source": "Fall foraging",
+                "obtained": false
+            },
+            {
+                "name": "Blackberry",
+                "source": "Fall foraging, The Farm Cave (fruit bat option)",
+                "obtained": false
+            }
+        ],
+        "reward": "Fall Seeds (30)",
+        "count": 4,
+        "img": "Parsnip"
+    },
+    "crafts4": {
+        "items": [
+            {
+                "name": "Winter Root",
+                "source": "Tilling soil or Artifact Spots in Winter, dropped by Blue Slimes on floors 41-79 of The Mines",
+                "obtained": false
+            },
+            {
+                "name": "Crystal Fruit",
+                "source": "Winter Foraging, dropped by Dust Sprites on floors 41-79 of The Mines",
+                "obtained": false
+            },
+            {
+                "name": "Snow Yam",
+                "source": "Tilling soil or Artifact Spots in Winter",
+                "obtained": false
+            },
+            {
+                "name": "Crocus",
+                "source": "Winter foraging",
+                "obtained": false
+            }
+        ],
+        "reward": "Winter Seeds (30)",
+        "count": 4,
+        "img": "Parsnip"
+    },
+    "crafts5": {
+        "items": [
+            {
+                "name": "Wood (99)",
+                "source": "Chopping Trees or branches with an Axe",
+                "obtained": false
+            },
+            {
+                "name": "Wood (99)",
+                "source": "Chopping Trees or branches with an Axe",
+                "obtained": false
+            },
+            {
+                "name": "Stone (99)",
+                "source": "Smashing stones with a Pickaxe",
+                "obtained": false
+            },
+            {
+                "name": "Hardwood (10)",
+                "source": "Chopping Large Stumps or Large Logs with an upgraded Axe, smashing crates in The Mines",
+                "obtained": false
+            }
+        ],
+        "reward": "Charcoal Kiln (1)",
+        "count": 4,
+        "img": "Parsnip"
+    },
+    "crafts6": {
+        "items": [
+            {
+                "name": "Coconut",
+                "source": "Desert Foraging",
+                "obtained": false
+            },
+            {
+                "name": "Cactus Fruit",
+                "source": "Desert Foraging",
+                "obtained": false
+            },
+            {
+                "name": "Cave Carrot",
+                "source": "The Mines, either smashing boxes or tilling soil",
+                "obtained": false
+            },
+            {
+                "name": "Red Mushroom",
+                "source": "Foraging in The Mines, Summer or Fall Foraging in the Secret Woods, The Farm Cave (mushroom option), Tapping a Mushroom Tree, Forest Farm Map in Fall.",
+                "obtained": false
+            },
+            {
+                "name": "Purple Mushroom",
+                "source": "The Mines, The Farm Cave (mushroom option), Forest Farm Map Foraging in Fall",
+                "obtained": false
+            },
+            {
+                "name": "Maple Syrup",
+                "source": "Tapped Maple tree",
+                "obtained": false
+            },
+            {
+                "name": "Oak Resin",
+                "source": "Tapped Oak tree",
+                "obtained": false
+            },
+            {
+                "name": "Pine Tar",
+                "source": "Tapped Pine tree",
+                "obtained": false
+            },
+            {
+                "name": "Morel",
+                "source": "Foraging in the Secret Woods or Forest Farm Map in Spring, The Farm Cave (mushroom option)",
+                "obtained": false
+            }
+        ],
+        "reward": "Autumn's Bounty (5)",
+        "count": 5,
+        "img": "Parsnip"
+    },
+    "pantry1": {
+        "items": [
+            {
+                "name": "Parsnip",
+                "source": "Spring crops",
+                "obtained": false
+            },
+            {
+                "name": "Green Bean",
+                "source": "Spring crops",
+                "obtained": false
+            },
+            {
+                "name": "Cauliflower",
+                "source": "Spring crops",
+                "obtained": false
+            },
+            {
+                "name": "Potato",
+                "source": "Spring crops",
+                "obtained": false
+            }
+        ],
+        "reward": "Speed-Gro (20)",
+        "count": 4,
+        "img": "Parsnip"
+    },
+    "pantry2": {
+        "items": [
+            {
+                "name": "Tomato",
+                "source": "Summer crops",
+                "obtained": false
+            },
+            {
+                "name": "Hot Pepper",
+                "source": "Summer crops",
+                "obtained": false
+            },
+            {
+                "name": "Blueberry",
+                "source": "Summer crops",
+                "obtained": false
+            },
+            {
+                "name": "Melon",
+                "source": "Summer crops",
+                "obtained": false
+            }
+        ],
+        "reward": "Quality Sprinkler (1)",
+        "count": 4,
+        "img": "Melon"
+    },
+    "pantry3": {
+        "items": [
+            {
+                "name": "Corn",
+                "source": "Summer/Fall crops",
+                "obtained": false
+            },
+            {
+                "name": "Eggplant",
+                "source": "Fall crops",
+                "obtained": false
+            },
+            {
+                "name": "Pumpkin",
+                "source": "Fall crops",
+                "obtained": false
+            },
+            {
+                "name": "Yam",
+                "source": "Fall crops, dropped by Duggys on floors 6-29 of The Mines (3%)",
+                "obtained": false
+            }
+        ],
+        "reward": "Bee House (1)",
+        "count": 4,
+        "img": "Eggplant"
+    },
+    "pantry4": {
+        "items": [
+            {
+                "name": "Parsnip (5)",
+                "source": "Gold quality Spring crops",
+                "obtained": false
+            },
+            {
+                "name": "Melon (5)",
+                "source": "Gold quality Summer crops",
+                "obtained": false
+            },
+            {
+                "name": "Pumpkin (5)",
+                "source": "Gold quality Fall crops",
+                "obtained": false
+            },
+            {
+                "name": "Corn (5)",
+                "source": "Gold quality Summer/Fall crops",
+                "obtained": false
+            }
+        ],
+        "reward": "Preserves Jar (1)",
+        "count": 4,
+        "img": "Pumpkin"
+    },
+    "pantry5": {
+        "items": [
+            {
+                "name": "Large Milk",
+                "source": "Cows",
+                "obtained": false
+            },
+            {
+                "name": "Large Egg (Brown)",
+                "source": "Chickens",
+                "obtained": false
+            },
+            {
+                "name": "Large Egg (White)",
+                "source": "Chickens",
+                "obtained": false
+            },
+            {
+                "name": "Large Goat Milk",
+                "source": "Goats",
+                "obtained": false
+            },
+            {
+                "name": "Wool",
+                "source": "Sheep, Rabbits",
+                "obtained": false
+            },
+            {
+                "name": "Duck Egg",
+                "source": "Ducks",
+                "obtained": false
+            }
+        ],
+        "reward": "Cheese Press (1)",
+        "count": 5,
+        "img": "Chicken"
+    },
+    "pantry6": {
+        "items": [
+            {
+                "name": "Truffle Oil",
+                "source": "Made from Truffles using an Oil Maker",
+                "obtained": false
+            },
+            {
+                "name": "Cloth",
+                "source": "Loom, Recycling a Soggy Newspaper, Desert Trader",
+                "obtained": false
+            },
+            {
+                "name": "Goat Cheese",
+                "source": "Cheese Press",
+                "obtained": false
+            },
+            {
+                "name": "Cheese",
+                "source": "Cheese Press, Desert Trader",
+                "obtained": false
+            },
+            {
+                "name": "Honey",
+                "source": "Bee House, Oasis",
+                "obtained": false
+            },
+            {
+                "name": "Jelly",
+                "source": "Preserves Jar",
+                "obtained": false
+            },
+            {
+                "name": "Apple",
+                "source": "Apple Trees during Fall, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Apricot",
+                "source": "Apricot Trees during Spring, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Orange",
+                "source": "Orange Trees during Summer, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Peach",
+                "source": "Peach Trees during Summer, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Pomegranate",
+                "source": "Pomegranate Trees during Fall, The Farm Cave (fruit bat option)",
+                "obtained": false
+            },
+            {
+                "name": "Cherry",
+                "source": "Cherry Trees during Spring, The Farm Cave (fruit bat option)",
+                "obtained": false
+            }
+        ],
+        "reward": "Keg (1)",
+        "count": 5,
+        "img": "Truffle_Oil"
+    }
+}

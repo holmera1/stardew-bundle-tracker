@@ -24,7 +24,7 @@
         ],
         "reward": "Spring Seeds (30)",
         "count": 4,
-        "img": "Parsnip"
+        "img": "Daffodil"
     },
     "crafts2": {
         "items": [
@@ -46,7 +46,7 @@
         ],
         "reward": "Summer Seeds (30)",
         "count": 3,
-        "img": "Parsnip"
+        "img": "Grape"
     },
     "crafts3": {
         "items": [
@@ -73,7 +73,7 @@
         ],
         "reward": "Fall Seeds (30)",
         "count": 4,
-        "img": "Parsnip"
+        "img": "Common_Mushroom"
     },
     "crafts4": {
         "items": [
@@ -100,7 +100,7 @@
         ],
         "reward": "Winter Seeds (30)",
         "count": 4,
-        "img": "Parsnip"
+        "img": "Snow_Yam"
     },
     "crafts5": {
         "items": [
@@ -127,7 +127,7 @@
         ],
         "reward": "Charcoal Kiln (1)",
         "count": 4,
-        "img": "Parsnip"
+        "img": "Wood"
     },
     "crafts6": {
         "items": [
@@ -179,7 +179,7 @@
         ],
         "reward": "Autumn's Bounty (5)",
         "count": 5,
-        "img": "Parsnip"
+        "img": "Cactus_Fruit"
     },
     "pantry1": {
         "items": [
@@ -392,5 +392,466 @@
         "reward": "Keg (1)",
         "count": 5,
         "img": "Truffle_Oil"
+    },
+    "fish1": {
+        "items": [
+            {
+                "name": "Sunfish",
+                "source": "Found in Rivers, 6am – 7pm, Spring, and Summer during sunny weather. Found in the Riverlands Farm or in the Wilderness Farm pond during rainy weather.",
+                "obtained": false
+            },
+            {
+                "name": "Catfish",
+                "source": "Found in Rivers and Secret Woods Pond 6am – midnight, Spring and Fall. Only when raining.",
+                "obtained": false
+            },
+            {
+                "name": "Shad",
+                "source": "Found in Rivers, 9am – 2am, Spring, Summer, and Fall. Only when raining.",
+                "obtained": false
+            },
+            {
+                "name": "Tiger Trout",
+                "source": "Found in Rivers, 6am – 7pm, Fall and Winter.",
+                "obtained": false
+            }
+        ],
+        "reward": "Bait (30)",
+        "count": 4,
+        "img": "Sunfish"
+    },
+    "fish2": {
+        "items": [
+            {
+                "name": "Largemouth Bass",
+                "source": "Found in the Mountain lake, 6am – 7pm, All Seasons.",
+                "obtained": false
+            },
+            {
+                "name": "Carp",
+                "source": "Found in the Mountain lake, Anytime, during Summer, Spring, or Fall. Found in Cindersap Forest pond, Anytime, Spring, Summer, or Fall. Found in Secret Woods or Sewer, Anytime, All Seasons.",
+                "obtained": false
+            },
+            {
+                "name": "Bullhead",
+                "source": "Found in the Mountain Lake, Anytime, All Seasons.",
+                "obtained": false
+            },
+            {
+                "name": "Sturgeon",
+                "source": "Found in the Mountain Lake, 6am – 7pm, Summer and Winter.",
+                "obtained": false
+            }
+        ],
+        "reward": "Dressed Spinner (1)",
+        "count": 4,
+        "img": "Sturgeon"
+    },
+    "fish3": {
+        "items": [
+            {
+                "name": "Sardine",
+                "source": "Found in the Ocean, 6am – 7pm, Spring, Fall, and Winter.",
+                "obtained": false
+            },
+            {
+                "name": "Tuna",
+                "source": "Found in the Ocean, 6am – 7pm, Summer and Winter.",
+                "obtained": false
+            },
+            {
+                "name": "Red Snapper",
+                "source": "Found in the Ocean, 6am – 7pm, Summer and Fall. Only when raining.",
+                "obtained": false
+            },
+            {
+                "name": "Tilapia",
+                "source": "Found in the Ocean, 6am – 2pm, Summer and Fall.",
+                "obtained": false
+            }
+        ],
+        "reward": "Warp Totem: Beach (5)",
+        "count": 4,
+        "img": "Tuna"
+    },
+    "fish4": {
+        "items": [
+            {
+                "name": "Walleye",
+                "source": "Found in Rivers, Lakes and Forest Pond, 12pm – 2am, Fall. Only when raining.",
+                "obtained": false
+            },
+            {
+                "name": "Bream",
+                "source": "Found in Rivers, 6pm – 2am, All Seasons.",
+                "obtained": false
+            },
+            {
+                "name": "Eel",
+                "source": "Found in the Ocean, 4pm – 2am, Spring or Fall. Only when rainin",
+                "obtained": false
+            }
+        ],
+        "reward": "Small Glow Ring (1)",
+        "count": 3,
+        "img": "Eel"
+    },
+    "fish5": {
+        "items": [
+            {
+                "name": "Lobster",
+                "source": "Caught in Crab Pots (ocean)",
+                "obtained": false
+            },
+            {
+                "name": "Crayfish",
+                "source": "Caught in Crab Pots (freshwater)",
+                "obtained": false
+            },
+            {
+                "name": "Crab",
+                "source": "Caught in Crab Pots (ocean), drops from Rock Crabs or Lava Crabs in The Mines",
+                "obtained": false
+            },
+            {
+                "name": "Cockle",
+                "source": "Caught in Crab Pots (ocean), Beach Foraging",
+                "obtained": false
+            },
+            {
+                "name": "Mussel",
+                "source": "Caught in Crab Pots (ocean), Beach Foraging",
+                "obtained": false
+            },
+            {
+                "name": "Shrimp",
+                "source": "Caught in Crab Pots (ocean)",
+                "obtained": false
+            },
+            {
+                "name": "Snail",
+                "source": "Caught in Crab Pots (freshwater)",
+                "obtained": false
+            },
+            {
+                "name": "Periwinkle",
+                "source": "Caught in Crab Pots (freshwater)",
+                "obtained": false
+            },
+            {
+                "name": "Oyster",
+                "source": "Caught in Crab Pots (ocean), Beach Foraging",
+                "obtained": false
+            },
+            {
+                "name": "Clam",
+                "source": "Caught in Crab Pots (ocean), Beach Foraging",
+                "obtained": false
+            }
+        ],
+        "reward": "Crab Pot (3)",
+        "count": 5,
+        "img": "Crab"
+    },
+    "fish6": {
+        "items": [
+            {
+                "name": "Pufferfish",
+                "source": "Found in the Ocean, 12pm – 4pm, Summer during sunny weather.",
+                "obtained": false
+            },
+            {
+                "name": "Ghostfish",
+                "source": "Found in ponds in The Mines floors 20 and 60, Anytime, All Seasons. May also be dropped by Ghosts.",
+                "obtained": false
+            },
+            {
+                "name": "Sandfish",
+                "source": "Found in the pond in The Desert, 6am – 8pm, All Seasons.",
+                "obtained": false
+            },
+            {
+                "name": "Woodskip",
+                "source": "Found in the Secret Woods and the Forest Farm, Anytime, All Seasons.",
+                "obtained": false
+            }
+        ],
+        "reward": "Dish o' the Sea (5)",
+        "count": 4,
+        "img": "Pufferfish"
+    },
+    "boiler1": {
+        "items": [
+            {
+                "name": "Copper Bar",
+                "source": "Smelting Copper Ore in the Furnace",
+                "obtained": false
+            },
+            {
+                "name": "Iron Bar",
+                "source": "Smelting Iron Ore in the Furnace, Crafting the 'Transmute (Fe)' recipe",
+                "obtained": false
+            },
+            {
+                "name": "Gold Bar",
+                "source": "Smelting Gold Ore in the Furnace, Crafting the 'Transmute (Au)' recipe",
+                "obtained": false
+            }
+        ],
+        "reward": "Furnace (1)",
+        "count": 3,
+        "img": "Iron_Bar"
+    },
+    "boiler2": {
+        "items": [
+            {
+                "name": "Quartz",
+                "source": "Foraging on all floors of The Mines",
+                "obtained": false
+            },
+            {
+                "name": "Earth Crystal",
+                "source": "Foraging on floors 1-39 of The Mines, Geodes, Omni Geodes, drop from Duggies in the Mines (floors 1-29)",
+                "obtained": false
+            },
+            {
+                "name": "Frozen Tear",
+                "source": "Foraging on floors 40-79 of The Mines, Frozen Geodes, Omni Geodes, drop from Dust Sprites in the Mines (floors 40-80)",
+                "obtained": false
+            },
+            {
+                "name": "Fire Quartz",
+                "source": "Foraging on floors 80-120 of The Mines, Magma Geodes, Omni Geodes",
+                "obtained": false
+            }
+        ],
+        "reward": "Omni Geode (5)",
+        "count": 4,
+        "img": "Quartz"
+    },
+    "boiler3": {
+        "items": [
+            {
+                "name": "Slime (99)",
+                "source": "Dropped by Slimes",
+                "obtained": false
+            },
+            {
+                "name": "Bat Wing (10)",
+                "source": "Dropped by Bats in The Mines",
+                "obtained": false
+            },
+            {
+                "name": "Solar Essence",
+                "source": "Dropped by Ghosts, Squid Kids, or Metal Heads in The Mines, dropped by Mummies in the Skull Cavern",
+                "obtained": false
+            },
+            {
+                "name": "Void Essence",
+                "source": "Dropped by Shadow Brutes in The Mines or Serpents in the Skull Cavern",
+                "obtained": false
+            }
+        ],
+        "reward": "Small Magnet Ring (1)",
+        "count": 2,
+        "img": "Solar_Essence"
+    },
+    "board1": {
+        "items": [
+            {
+                "name": "Maple Syrup",
+                "source": "Tapped Maple tree",
+                "obtained": false
+            },
+            {
+                "name": "Fiddlehead Fern",
+                "source": "Summer Foraging in the Secret Woods",
+                "obtained": false
+            },
+            {
+                "name": "Truffle",
+                "source": "Pigs",
+                "obtained": false
+            },
+            {
+                "name": "Poppy",
+                "source": "Summer Crops",
+                "obtained": false
+            },
+            {
+                "name": "Maki Roll",
+                "source": "Cooking (recipe sources: The Queen of Sauce, The Saloon)",
+                "obtained": false
+            },
+            {
+                "name": "Fried Egg",
+                "source": "Cooking",
+                "obtained": false
+            }
+        ],
+        "reward": "Pink Cake (3)",
+        "count": 6,
+        "img": "Maki_Roll"
+    },
+    "board2": {
+        "items": [
+            {
+                "name": "Red Mushroom",
+                "source": "Foraging in The Mines, Summer or Fall Foraging in the Secret Woods, The Farm Cave (mushroom option), Tapping a Mushroom Tree",
+                "obtained": false
+            },
+            {
+                "name": "Sea Urchin",
+                "source": "Beach Foraging, after using 300 wood to fix the bridge to the right side of the beach",
+                "obtained": false
+            },
+            {
+                "name": "Sunflower",
+                "source": "Summer / Fall Crops",
+                "obtained": false
+            },
+            {
+                "name": "Duck Feather",
+                "source": "Ducks",
+                "obtained": false
+            },
+            {
+                "name": "Aquamarine",
+                "source": "Aquamarine Nodes, boxes in The Mines, Fishing Treasure Chests",
+                "obtained": false
+            },
+            {
+                "name": "Red Cabbage",
+                "source": "Summer Crops (Red Cabbage Seeds are available at Pierre's General Store in year 2+)",
+                "obtained": false
+            }
+        ],
+        "reward": "Seed Maker (1)",
+        "count": 6,
+        "img": "Sea_Urchin"
+    },
+    "board3": {
+        "items": [
+            {
+                "name": "Purple Mushroom",
+                "source": "The Mines, The Farm Cave (mushroom option), Forest Farm Map Foraging in Fall",
+                "obtained": false
+            },
+            {
+                "name": "Nautilus Shell",
+                "source": "Winter Beach Foraging (Note: NOT the Nautilus Fossil artifact)",
+                "obtained": false
+            },
+            {
+                "name": "Chub",
+                "source": "Can be found in the mountain lake and river during all seasons, any time.",
+                "obtained": false
+            },
+            {
+                "name": "Frozen Geode",
+                "source": "The Mines floors 40-79",
+                "obtained": false
+            }
+        ],
+        "reward": "Recycling Machine (1)",
+        "count": 4,
+        "img": "Nautilus_Shell"
+    },
+    "board4": {
+        "items": [
+            {
+                "name": "Wheat (10)",
+                "source": "Summer / Fall Crops",
+                "obtained": false
+            },
+            {
+                "name": "Hay (10)",
+                "source": "Purchase at Marnie's Ranch or Desert Trader, or harvest from Grass or Wheat.",
+                "obtained": false
+            },
+            {
+                "name": "Apple (3)",
+                "source": "Apple Trees during Fall, The Farm Cave (fruit bat option)",
+                "obtained": false
+            }
+        ],
+        "reward": "Heater (1)",
+        "count": 3,
+        "img": "Hay"
+    },
+    "board5": {
+        "items": [
+            {
+                "name": "Oak Resin",
+                "source": "Tapped Oak tree",
+                "obtained": false
+            },
+            {
+                "name": "Wine",
+                "source": "Keg",
+                "obtained": false
+            },
+            {
+                "name": "Rabbit's Foot",
+                "source": "Rabbits, Serpent drop in Skull Cavern (0.8%)",
+                "obtained": false
+            },
+            {
+                "name": "Pomegranate",
+                "source": "Pomegranate Trees during Fall, The Farm Cave (fruit bat option)",
+                "obtained": false
+            }
+        ],
+        "reward": "Gold Bar (5)",
+        "count": 4,
+        "img": "Rabbit's_Foot"
+    },
+    "vault1": {
+        "items": [
+            {
+                "name": "2,500g",
+                "source": "",
+                "obtained": false
+            }
+        ],
+        "reward": "Chocolate Cake (30)",
+        "count": 1,
+        "img": "2500_Bundle"
+    },
+    "vault2": {
+        "items": [
+            {
+                "name": "5,000g",
+                "source": "",
+                "obtained": false
+            }
+        ],
+        "reward": "Quality Fertilizer (3)",
+        "count": 1,
+        "img": "5000_Bundle"
+    },
+    "vault3": {
+        "items": [
+            {
+                "name": "10,000g",
+                "source": "",
+                "obtained": false
+            }
+        ],
+        "reward": "Lightning Rod (1)",
+        "count": 1,
+        "img": "10000_Bundle"
+    },
+    "vault4": {
+        "items": [
+            {
+                "name": "25,000g",
+                "source": "",
+                "obtained": false
+            }
+        ],
+        "reward": "Crystalarium (1)",
+        "count": 1,
+        "img": "25000_Bundle"
     }
 }

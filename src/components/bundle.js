@@ -10,10 +10,9 @@ export const Bundle = (props) => {
     return (
         <Container style={{ padding: "2%" }}>
             <Col sm={{ size: 10 }}>
-                <div>
-                    <img src={imageName.default} style={{display: 'inline-block', verticalAlign: 'bottom'}}/>
-                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0'}}> {props.name} (0/{itemData[props.bundle].count})</p>
-                    
+                <div style={{marginBottom: '0px'}}>
+                    <img src={imageName.default} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
+                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0'}}>&nbsp;{props.name} (0/{itemData[props.bundle].count})</p>
                 </div>
                 
                 <Table bordered hover striped size="sm" variant="dark">

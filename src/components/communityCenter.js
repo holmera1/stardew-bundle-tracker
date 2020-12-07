@@ -1,10 +1,19 @@
 import React from "react";
-import { Tabs, Tab } from "react-bootstrap";
+import { Tabs, Tab, Button } from "react-bootstrap";
 import { Bundle } from "./bundle";
+import useForceUpdate from 'use-force-update';
 
 export const CommunityCenter = (props) => {
+
+    const forceUpdate = useForceUpdate();
+
+    const handleClick = React.useCallback(() => {
+        forceUpdate();
+    }, [forceUpdate])
+
     return (
         <div>
+            <Button onClick={handleClick} variant="primary">Load</Button>
             <Tabs defaultActiveKey="crafts" id="uncontrolled-tab-example" transition={false}>
                 <Tab eventKey="crafts" title="Crafts Room">
                     <Bundle name={"Spring Foraging Bundle"} bundle={"crafts1"}></Bundle>

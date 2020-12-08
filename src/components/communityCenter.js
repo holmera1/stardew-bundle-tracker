@@ -6,7 +6,7 @@ import useForceUpdate from 'use-force-update';
 export const CommunityCenter = (props) => {
 
     const forceUpdate = useForceUpdate();
-
+    
     const handleClick = React.useCallback(() => {
         forceUpdate();
     }, [forceUpdate])

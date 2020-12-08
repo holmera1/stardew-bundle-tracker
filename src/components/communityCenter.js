@@ -13,7 +13,10 @@ export const CommunityCenter = (props) => {
 
     return (
         <div>
-            <Button onClick={handleClick} variant="primary">Load</Button>
+            <div>
+                <span style={{fontSize: '38px', margin: '8px'}}>Stardew Valley Bundle Companion</span>
+                <Button onClick={handleClick} variant="primary" style={{display: 'inline-block', float: 'right'}}>Load</Button>
+            </div>
             <Tabs defaultActiveKey="crafts" id="uncontrolled-tab-example" transition={false}>
                 <Tab eventKey="crafts" title="Crafts Room">
                     <Bundle name={"Spring Foraging Bundle"} bundle={"crafts1"}></Bundle>

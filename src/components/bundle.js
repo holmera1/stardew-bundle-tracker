@@ -2,6 +2,12 @@ import React, {useState} from "react";
 import { Table, Col, Container, Form } from "react-bootstrap";
 const { ipcRenderer } = window.require('electron');
 
+
+/* TODO
+    add links for every item in the itemData json
+    package (see bookmarked link)
+*/
+
 export const Bundle = (props) => {
 
     let itemData = require('../itemData.json');
@@ -28,7 +34,7 @@ export const Bundle = (props) => {
         <Container style={{ padding: "2%" }}>
             <Col sm={{ size: 10 }}>
                 <div style={{marginBottom: '0px'}}>
-                    <img src={imageName.default} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
+                    <img src={imageName.default} alt={''} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
                     <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0'}}>&nbsp;{props.name} (Need {itemData[props.bundle].count})</p>
                 </div>
                 <Table bordered hover striped size="sm" variant="dark">

@@ -1,52 +1,112 @@
 {
-  "name": "stardew-tracker",
-  "version": "0.1.0",
-  "main": "src/Main.js",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.5.0",
-    "bootstrap": "^4.5.3",
-    "bootswatch": "^4.5.3",
-    "edit-json-file": "^1.5.0",
-    "electron": "^11.0.3",
-    "electron-store": "^6.0.1",
-    "jquery": "^3.5.1",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "use-force-update": "^1.0.7",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron": "electron ."
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "electron": "^11.0.3",
-    "webpack-cli": "^4.2.0"
-  }
+    "name": "stardew-tracker",
+    "author": "Robert Holmes",
+    "description": "Stardew Valley bundle tracker desktop application",
+    "version": "1.0.0",
+    "main": "src/Main.js",
+    "homepage": "./",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.6",
+        "@testing-library/react": "^11.2.2",
+        "@testing-library/user-event": "^12.5.0",
+        "bootstrap": "^4.5.3",
+        "bootswatch": "^4.5.3",
+        "concurrently": "^5.3.0",
+        "edit-json-file": "^1.5.0",
+        "electron": "^11.0.3",
+        "electron-squirrel-startup": "^1.0.0",
+        "electron-store": "^6.0.1",
+        "eslint": "^7.15.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.21.5",
+        "jquery": "^3.5.1",
+        "react": "^17.0.1",
+        "react-bootstrap": "^1.4.0",
+        "react-dom": "^17.0.1",
+        "react-scripts": "4.0.1",
+        "use-force-update": "^1.0.7",
+        "wait-on": "^5.2.0",
+        "web-vitals": "^0.2.4"
+    },
+    "scripts": {
+        "start": "nf start -p 3000",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "electron": "electron .",
+        "electron-start": "node src/start-react",
+        "react-start": "BROWSER=none react-scripts start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.54",
+        "@electron-forge/maker-deb": "^6.0.0-beta.54",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+        "@electron-forge/maker-zip": "^6.0.0-beta.54",
+        "electron-builder": "^22.9.1",
+        "electron": "^11.0.3",
+        "webpack-cli": "^4.2.0"
+    },
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": ["zip"],
+                "linux": ["zip"]
+            },
+            "packagerConfig": {
+                "icon": "resources/icon",
+                "name": "Stardew Valley Bundle Companion",
+                "asar": true
+            },
+            "makers": [
+                {
+                    "name": "@electron-forge/maker-squirrel",
+                    "config": {
+                        "name": "stardew_tracker"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-zip",
+                    "config": {
+                        "name": "stardew_tracker"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-deb",
+                    "config": {}
+                },
+                {
+                    "name": "@electron-forge/maker-rpm",
+                    "config": {}
+                }
+            ]
+        }
+    }
 }

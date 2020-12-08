@@ -10,14 +10,13 @@ let mainWindow;
 
 const createWindow = () => {
     mainWindow = new BrowserWindow({
-        width: 1400,
-        height: 800,
+        width: 900,
+        height: 1000,
         webPreferences: {
             nodeIntegration: true
         }
     });
-    mainWindow.loadURL('http://localhost:3000/');
-    mainWindow.webContents.openDevTools();
+    mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
 }
 
 app.on('window-all-closed', () => {
@@ -26,14 +25,13 @@ app.on('window-all-closed', () => {
     }
 });
 
-app.on('activate', function () {
+app.on('activate', () => {
     if (mainWindow === null) {
         createWindow()
     }
 });
 
 ipcMain.on('data', (event, bundle, itemIdx) => {
-    console.log(`changing ${bundle}${itemIdx}`);
     if(store.has(`${bundle}${itemIdx}`)) {
         let val = (store.get(`${bundle}${itemIdx}`));
         store.set(`${bundle}${itemIdx}`, !val);
@@ -42,7 +40,7 @@ ipcMain.on('data', (event, bundle, itemIdx) => {
     }
 });
 
-ipcMain.on('clear', (event) => {
+ipcMain.on('clear', () => {
     store.clear();
 });
 
@@ -54,5 +52,7 @@ ipcMain.handle('get', (event, bundle, itemIdx) => {
         return false;
     }
 })
+
+if(require('electron-squirrel-startup')) return;
 
 app.whenReady().then(createWindow);

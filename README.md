@@ -1,5 +1,7 @@
 # Stardew Valley Bundle Tracker
 
+![](src/images/stardew-preview/png)
+
 ## Description
 
 This desktop application is designed for Stardew Valley players to help them track and plan bundle progress more efficiently. It is currently supported on Windows and Linux.

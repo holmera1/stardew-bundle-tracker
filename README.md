@@ -1,6 +1,6 @@
 # Stardew Valley Bundle Tracker
 
-![](src/images/stardew-preview/png)
+![](https://github.com/holmera1/stardew-bundle-tracker/blob/master/src/images/stardew-preview.png)
 
 ## Description
 

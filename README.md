@@ -4,14 +4,13 @@
 
 ## Description
 
-This desktop application is designed for Stardew Valley players to help them track and plan bundle progress more efficiently. It is currently supported on Windows and Linux.
+This desktop application is designed for Stardew Valley players to help them track and plan bundle progress more efficiently. It is currently supported on Windows.
 
 ## Installation
 
-1. Download the installation ZIP file here: http://www.mediafire.com/file/9ojar4u0tqvq7qx/Stardew+Valley+Bundle+Companion.rar/file
-2. Extract the ZIP file.
-3. (WINDOWS INSTALLER) Run the installer located at make/squirrel.windows/x64/Stardew Valley Bundle Companion 1.x.x Setup.exe. A desktop shortcut will be created automatically, or you can run the application by searching 'Stardew Vally Bundle Companion' in the taskbar. 
-3. (OTHER) If you are not a Windows user or do not wish to use the installer, there is a second zip file located at make/zip/win32/x64/Stardew Valley Bundle Companion-win32-x64-1.0.0.zip. Extract it, and then run 'Stardew Valley Bundle Companion.exe' to use the application.
+1. Under 'releases', click the latest release.
+2. (WINDOWS INSTALLER) Download and run the installer Stardew Valley Bundle Companion x.x.x Setup.exe. A desktop shortcut will be created automatically, or you can run the application by searching 'Stardew Vally Bundle Companion' in the taskbar. 
+3. (ZIP) If you do not wish to use the installer, download and extract the zip file Stardew.Valley.Bundle.Companion-win32-x64-1.1.2.zip. Run 'Stardew Valley Bundle Companion.exe' to use the application.
 
 ## How to Use
 

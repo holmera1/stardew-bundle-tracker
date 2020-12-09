@@ -18,6 +18,7 @@ const createWindow = () => {
     });
     mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
     //mainWindow.loadURL('http://localhost:3000');
+    mainWindow.setMenu(null);
     mainWindow.webContents.on("new-window", function(event, url) {
         event.preventDefault();
         shell.openExternal(url);
@@ -61,7 +62,6 @@ ipcMain.handle('get', (event, bundle, itemIdx) => {
         return false;
     }
 });
-
 
 if(require('electron-squirrel-startup')) return;
 

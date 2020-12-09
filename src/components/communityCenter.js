@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Tabs, Tab, Button } from "react-bootstrap";
 import { Bundle } from "./bundle";
 import useForceUpdate from 'use-force-update';
 const { ipcRenderer } = window.require('electron');
 
-export const CommunityCenter = (props) => {
+export const CommunityCenter = () => {
 
     let itemData = require('../itemData.json');
 
@@ -18,15 +18,11 @@ export const CommunityCenter = (props) => {
     }, [forceUpdate]);
 
     useEffect(() => {
-        setTimeout(
-            () => forceUpdate(), 
-            100
-          );
+        setTimeout(() => forceUpdate(), 100);
     }, []);
 
     return (
         <div>
-            
             <Tabs defaultActiveKey="crafts" id="uncontrolled-tab-example" transition={false}>
                 <Tab eventKey="crafts" title="Crafts Room">
                     <h4 style={{marginTop: '20px', marginLeft: '20px'}}>Reward: <a href={itemData.craftsRewardLink} target="_blank">{itemData["craftsReward"]}</a></h4>

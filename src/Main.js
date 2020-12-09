@@ -1,6 +1,4 @@
 const {app, BrowserWindow, shell } = require('electron');
-const path = require('path');
-const url = require('url');
 const Store = require('electron-store');
 const { ipcMain } = require('electron');
 
@@ -8,6 +6,7 @@ const store = new Store();
 
 let mainWindow;
 
+// create main window
 const createWindow = () => {
     mainWindow = new BrowserWindow({
         width: 1100,
@@ -16,8 +15,10 @@ const createWindow = () => {
             nodeIntegration: true
         }
     });
+    // used for development purposes
     mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
     //mainWindow.loadURL('http://localhost:3000');
+    
     mainWindow.setMenu(null);
     mainWindow.webContents.on("new-window", function(event, url) {
         event.preventDefault();
@@ -37,6 +38,7 @@ app.on('activate', () => {
     }
 });
 
+// changes checkbox stored state when it is clicked
 ipcMain.on('data', (event, bundle, itemIdx) => {
     if(store.has(`${bundle}${itemIdx}`)) {
         let val = (store.get(`${bundle}${itemIdx}`));
@@ -46,15 +48,13 @@ ipcMain.on('data', (event, bundle, itemIdx) => {
     }
 });
 
+// clear stored checkbox state
 ipcMain.on('clear', () => {
     store.clear();
     mainWindow.reload();
 });
 
-ipcMain.on('refresh', () => {
-    mainWindow.reload();
-});
-
+// used to retrieve checkbox states when app launches
 ipcMain.handle('get', (event, bundle, itemIdx) => {
     if(store.has(`${bundle}${itemIdx}`)) {
         return store.get(`${bundle}${itemIdx}`);

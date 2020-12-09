@@ -41,7 +41,7 @@ export const Bundle = (props) => {
                     </thead>
                     <tbody>
                     {
-                        itemData[props.bundle] ? itemData[props.bundle].items.map((item, i) => {
+                        itemData[props.bundle].items.map((item, i) => {
                             handleItemState(props.bundle, i);
                             return (
                                 <tr key={i}>
@@ -52,12 +52,7 @@ export const Bundle = (props) => {
                                     <th>{item.source}</th>
                                 </tr>
                             )
-                        }) :
-                        <tr>
-                            <th style={{width: '5%'}}>{""}</th>
-                            <th style={{width: '15%'}}>{""}</th>
-                            <th>{""}</th>
-                        </tr>
+                        })
                     }
                         <tr>
                             <th style={{width: '5%'}}></th>

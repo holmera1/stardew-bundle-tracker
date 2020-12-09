@@ -1,4 +1,4 @@
-const {app, BrowserWindow } = require('electron');
+const {app, BrowserWindow, shell } = require('electron');
 const path = require('path');
 const url = require('url');
 const Store = require('electron-store');
@@ -10,13 +10,18 @@ let mainWindow;
 
 const createWindow = () => {
     mainWindow = new BrowserWindow({
-        width: 900,
+        width: 1100,
         height: 1000,
         webPreferences: {
             nodeIntegration: true
         }
     });
     mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
+    //mainWindow.loadURL('http://localhost:3000');
+    mainWindow.webContents.on("new-window", function(event, url) {
+        event.preventDefault();
+        shell.openExternal(url);
+    });
 }
 
 app.on('window-all-closed', () => {
@@ -27,7 +32,7 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
     if (mainWindow === null) {
-        createWindow()
+        createWindow();
     }
 });
 
@@ -42,8 +47,12 @@ ipcMain.on('data', (event, bundle, itemIdx) => {
 
 ipcMain.on('clear', () => {
     store.clear();
+    mainWindow.reload();
 });
 
+ipcMain.on('refresh', () => {
+    mainWindow.reload();
+});
 
 ipcMain.handle('get', (event, bundle, itemIdx) => {
     if(store.has(`${bundle}${itemIdx}`)) {
@@ -51,7 +60,8 @@ ipcMain.handle('get', (event, bundle, itemIdx) => {
     } else {
         return false;
     }
-})
+});
+
 
 if(require('electron-squirrel-startup')) return;
 

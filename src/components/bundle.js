@@ -2,12 +2,6 @@ import React, {useState} from "react";
 import { Table, Col, Container, Form } from "react-bootstrap";
 const { ipcRenderer } = window.require('electron');
 
-
-/* TODO
-    add links for every item in the itemData json
-    package (see bookmarked link)
-*/
-
 export const Bundle = (props) => {
 
     let itemData = require('../itemData.json');
@@ -31,7 +25,7 @@ export const Bundle = (props) => {
     }
 
     return (
-        <Container style={{ padding: "2%" }}>
+        <Container style={{ padding: "1.2%" }}>
             <Col sm={{ size: 10 }}>
                 <div style={{marginBottom: '0px'}}>
                     <img src={imageName.default} alt={''} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
@@ -54,7 +48,7 @@ export const Bundle = (props) => {
                                     <th style={{width: '5%', textAlign: 'center'}}>
                                         <Form.Check type="checkbox" onClick={() => {handleClick(props.bundle, i)}} defaultChecked={itemState[i]}/>
                                     </th>
-                                    <th style={{width: '15%'}}>{item.name}</th>
+                                    <th style={{width: '15%'}}><a href={item.link} target="_blank">{item.name}</a></th>
                                     <th>{item.source}</th>
                                 </tr>
                             )

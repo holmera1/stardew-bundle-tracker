@@ -1,4 +1,4 @@
-# Stardew Valley Bundle Tracker
+# Stardew Valley Bundle Companion
 
 ![](https://github.com/holmera1/stardew-bundle-tracker/blob/master/src/images/preview.png)
 

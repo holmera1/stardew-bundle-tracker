@@ -1,6 +1,7 @@
 const {app, BrowserWindow, shell } = require('electron');
 const Store = require('electron-store');
 const { ipcMain } = require('electron');
+const path = require('path');
 
 const store = new Store();
 

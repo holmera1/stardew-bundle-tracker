@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Tabs, Tab, Button } from "react-bootstrap";
 import { Bundle } from "./bundle";
-import useForceUpdate from 'use-force-update';
 const { ipcRenderer } = window.require('electron');
 
 export const CommunityCenter = () => {
@@ -10,16 +9,9 @@ export const CommunityCenter = () => {
 
     let imageName = require('../images/game_logo.png');
 
-    const forceUpdate = useForceUpdate();
-
-    const handleClear = React.useCallback(() => {
+    const handleClear = () => {
         ipcRenderer.send('clear');
-        forceUpdate();
-    }, [forceUpdate]);
-
-    useEffect(() => {
-        setTimeout(() => forceUpdate(), 100);
-    }, []);
+    };
 
     return (
         <div>

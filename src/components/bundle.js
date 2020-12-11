@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Table, Col, Container, Form } from "react-bootstrap";
 const { ipcRenderer } = window.require('electron');
 
@@ -8,28 +8,49 @@ export const Bundle = (props) => {
 
     let imageName = require(`../images/${itemData[props.bundle].img}.png`);
 
-    const [itemState, setItemState] = useState([]);
+    const [itemState, setItemState] = useState({items: []});
 
-    const handleClick = (bundle, itemIdx) => {
-        ipcRenderer.send('data', bundle, itemIdx);
-        let tmp = itemState;
-        tmp[itemIdx] = !itemState[itemIdx];
-        setItemState(tmp);
+    const handleClick = (event) => {
+        let itemIdx = event.target.name;
+        ipcRenderer.send('data', props.bundle, itemIdx);
+        let tmp = itemState.items;
+        tmp[itemIdx] = !itemState.items[itemIdx];
+        setItemState({
+            items: tmp
+        });
     }
 
-    const handleItemState = async (bundle, itemIdx) => {
-        let val = await ipcRenderer.invoke('get', bundle, itemIdx);
-        let tmp = itemState;
-        tmp[itemIdx] = val;
-        setItemState(tmp);
+    const countItems = () => {
+        let count = 0;
+        for(let i = 0; i < itemState.items.length; i++) {
+            if(itemState.items[i]) {
+                count++;
+            }
+        }
+        return count;
     }
+
+    const getDataAsync = async () => {
+        let tmp = [];
+        for(let i = 0; i < itemData[props.bundle].items.length; i++) {
+            let result = await ipcRenderer.invoke('get', props.bundle, i);
+            tmp[i] = result;
+        }
+        setItemState({
+            items: tmp
+        });
+    }
+
+    useEffect(() => {
+        getDataAsync();
+    }, [])
 
     return (
         <Container style={{ padding: "1.2%" }}>
             <Col sm={{ size: 10 }}>
                 <div style={{marginBottom: '0px'}}>
                     <img src={imageName.default} alt={''} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
-                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0'}}>&nbsp;{props.name} (Need {itemData[props.bundle].count})</p>
+                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0'}}>&nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
                 </div>
                 <Table bordered hover striped size="sm" variant="dark">
                     <thead>
@@ -40,20 +61,17 @@ export const Bundle = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                    {
-                        itemData[props.bundle].items.map((item, i) => {
-                            handleItemState(props.bundle, i);
+                    {itemData[props.bundle].items.map((item, i) => {
                             return (
                                 <tr key={i}>
                                     <th style={{width: '5%', textAlign: 'center'}}>
-                                        <Form.Check type="checkbox" onClick={() => {handleClick(props.bundle, i)}} defaultChecked={itemState[i]}/>
+                                        <Form.Check name={i} type="checkbox" onChange={handleClick} checked={itemState.items[i] ? itemState.items[i] : false}/>
                                     </th>
                                     <th style={{width: '15%'}}><a href={item.link} target="_blank">{item.name}</a></th>
                                     <th>{item.source}</th>
                                 </tr>
                             )
-                        })
-                    }
+                        })}
                         <tr>
                             <th style={{width: '5%'}}></th>
                             <th style={{width: '15%'}}>Reward</th>

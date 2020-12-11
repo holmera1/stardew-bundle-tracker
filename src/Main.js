@@ -7,7 +7,6 @@ const store = new Store();
 
 let mainWindow;
 
-// create main window
 const createWindow = () => {
     mainWindow = new BrowserWindow({
         width: 1100,
@@ -19,7 +18,6 @@ const createWindow = () => {
     // used for development purposes
     mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
     //mainWindow.loadURL('http://localhost:3000');
-    
     mainWindow.setMenu(null);
     mainWindow.webContents.on("new-window", function(event, url) {
         event.preventDefault();
@@ -40,25 +38,27 @@ app.on('activate', () => {
 });
 
 // changes checkbox stored state when it is clicked
-ipcMain.on('data', (event, bundle, itemIdx) => {
-    if(store.has(`${bundle}${itemIdx}`)) {
-        let val = (store.get(`${bundle}${itemIdx}`));
-        store.set(`${bundle}${itemIdx}`, !val);
+ipcMain.on('data', async (event, bundle, itemIdx) => {
+    const contains = await store.has(`${bundle}${itemIdx}`);
+    if(contains) {
+        let val = await (store.get(`${bundle}${itemIdx}`));
+        await store.set(`${bundle}${itemIdx}`, !val);
     } else {
-        store.set(`${bundle}${itemIdx}`, true);
+        await store.set(`${bundle}${itemIdx}`, true);
     }
 });
 
 // clear stored checkbox state
-ipcMain.on('clear', () => {
-    store.clear();
+ipcMain.on('clear', async (event) => {
+    await store.clear();
     mainWindow.reload();
 });
 
 // used to retrieve checkbox states when app launches
-ipcMain.handle('get', (event, bundle, itemIdx) => {
-    if(store.has(`${bundle}${itemIdx}`)) {
-        return store.get(`${bundle}${itemIdx}`);
+ipcMain.handle('get', async (event, bundle, itemIdx) => {
+    const contains = await store.has(`${bundle}${itemIdx}`);
+    if(contains) {
+        return await store.get(`${bundle}${itemIdx}`);
     } else {
         return false;
     }

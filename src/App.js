@@ -3,11 +3,8 @@ import 'bootswatch/dist/darkly/bootstrap.min.css';
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" >
             <CommunityCenter />
-            <div style={{ textAlign: 'center', bottom: '0' }}>
-                <p style={{ fontSize: '12px' }}>&#169; Robert Holmes, 2020</p>
-            </div>
         </div>
     );
 }

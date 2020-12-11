@@ -27,6 +27,9 @@ export const Bundle = (props) => {
                 count++;
             }
         }
+        if(count > itemData[props.bundle].count) {
+            return itemData[props.bundle].count;
+        }
         return count;
     }
 

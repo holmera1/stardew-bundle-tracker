@@ -69,11 +69,11 @@ export const CommunityCenter = () => {
                     <Bundle name={"The Missing Bundle"} bundle={"joja"}></Bundle>
                 </Tab>
             </Tabs>
-            <div style={{display: 'flex', justifyContent: 'center', paddingBottom: '40px'}}>
+            <div style={{display: 'flex', justifyContent: 'center', paddingBottom: '40px', paddingTop: '15px'}}>
                 <img src={imageName.default} alt="" style={{height: '100px', width: 'auto'}}/>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', paddingBottom: '40px'}}>
-                <Button onClick={handleClear} variant="success" style={{display: 'inline-block', float: 'left', margin: '5px'}}>Reset</Button>
+                <Button onClick={handleClear} variant="success" style={{display: 'inline-block', float: 'left', margin: '5px'}}>Reset All</Button>
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 import { CommunityCenter } from "./components/communityCenter";
-import 'bootswatch/dist/darkly/bootstrap.min.css';
+import 'bootswatch/dist/sandstone/bootstrap.min.css';
 
 function App() {
     return (

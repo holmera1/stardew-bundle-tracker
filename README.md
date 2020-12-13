@@ -1,6 +1,6 @@
 # Stardew Valley Bundle Companion
 
-![](https://github.com/holmera1/stardew-bundle-tracker/blob/master/src/images/preview3.png)
+![](https://github.com/holmera1/stardew-bundle-tracker/blob/master/src/images/preview4.png)
 
 ## Description
 

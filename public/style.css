@@ -1,4 +1,6 @@
 body {
-    height: 100vh;
-    background-image: url('background4edited.jpg');
+    background-image: url('background3.jpg');
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: auto;
 }

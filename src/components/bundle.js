@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Table, Col, Container, Form } from "react-bootstrap";
+import { Table, Container, Form } from "react-bootstrap";
 const { ipcRenderer } = window.require('electron');
 
 export const Bundle = (props) => {
@@ -47,13 +47,14 @@ export const Bundle = (props) => {
     useEffect(() => {
         getDataAsync();
     }, [])
-
+    
     return (
-        <Container style={{ padding: "1.2%" }}>
-            <Col sm={{ size: 10 }}>
+        <Container style={{ paddingTop: '15px', paddingBottom: '5px', marginBottom: '20px', backgroundColor: '#93C54B', borderRadius: '25px' }}>
+            <div style={{paddingLeft: '5px', paddingRight: '5px'}}>
                 <div style={{marginBottom: '0px'}}>
                     <img src={imageName.default} alt={''} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
-                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0'}}>&nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
+                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0', color: 'white'}}>
+                        &nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
                 </div>
                 <Table bordered hover striped size="sm" variant="dark">
                     <thead>
@@ -65,16 +66,16 @@ export const Bundle = (props) => {
                     </thead>
                     <tbody>
                     {itemData[props.bundle].items.map((item, i) => {
-                            return (
-                                <tr key={i}>
-                                    <th style={{width: '5%', textAlign: 'center'}}>
-                                        <Form.Check name={i} type="checkbox" onChange={handleClick} checked={itemState.items[i] ? itemState.items[i] : false}/>
-                                    </th>
-                                    <th style={{width: '15%'}}><a href={item.link} target="_blank">{item.name}</a></th>
-                                    <th>{item.source}</th>
-                                </tr>
-                            )
-                        })}
+                        return (
+                            <tr key={i}>
+                                <th style={{width: '5%', textAlign: 'center'}}>
+                                    <Form.Check name={i} type="checkbox" onChange={handleClick} checked={itemState.items[i] ? itemState.items[i] : false}/>
+                                </th>
+                                <th style={{width: '15%'}}><a href={item.link} target="_blank">{item.name}</a></th>
+                                <th>{item.source}</th>
+                            </tr>
+                        )
+                    })}
                         <tr>
                             <th style={{width: '5%'}}></th>
                             <th style={{width: '15%'}}>Reward</th>
@@ -82,7 +83,7 @@ export const Bundle = (props) => {
                         </tr>
                     </tbody>
                 </Table>
-            </Col>
+            </div>
         </Container>
     );
 };

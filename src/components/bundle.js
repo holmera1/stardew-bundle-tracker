@@ -49,11 +49,12 @@ export const Bundle = (props) => {
     }, [])
     
     return (
-        <Container style={{ paddingTop: '15px', paddingBottom: '5px', marginBottom: '20px', backgroundColor: '#93C54B', borderRadius: '25px' }}>
+        <Container style={{ paddingTop: '15px', paddingBottom: '5px', marginBottom: '20px', backgroundColor: '#F8F5F0', borderRadius: '25px',
+        borderColor: '#DFD7CA', borderStyle: 'solid', borderWidth: '2px', }}>
             <div style={{paddingLeft: '5px', paddingRight: '5px'}}>
-                <div style={{marginBottom: '0px'}}>
+                <div style={{marginBottom: '2px'}}>
                     <img src={imageName.default} alt={''} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
-                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '18px', margin: '0', color: 'white'}}>
+                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '20px', fontFamily: 'Roboto', margin: '0', color: '#616A6B'}}>
                         &nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
                 </div>
                 <Table bordered hover striped size="sm" variant="dark">

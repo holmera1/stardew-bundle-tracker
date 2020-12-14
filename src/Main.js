@@ -19,6 +19,7 @@ const createWindow = () => {
     mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
     //mainWindow.loadURL('http://localhost:3000');
     mainWindow.setMenu(null);
+    //mainWindow.toggleDevTools();
     mainWindow.webContents.on("new-window", function(event, url) {
         event.preventDefault();
         shell.openExternal(url);

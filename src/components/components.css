@@ -1,0 +1,89 @@
+.Room {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.Tail {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+#Logo {
+    height: 100px;
+    width: auto;
+}
+
+#ResetButton {
+    display: inline-block;
+    margin: 5px;
+}
+
+#BundleContainer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: #F8F5F0;
+    border-radius: 25px;
+    border-color: #DFD7CA;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#BundleHeader {
+    margin-bottom: 2px;
+}
+
+#BundleHeaderImg {
+    vertical-align: bottom;
+    width: 40px;
+    height: auto;
+}
+
+#BundleHeaderText {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Roboto;
+    margin: 0;
+    color: #616A6B;
+}
+
+#Table {
+    border-radius: 15px;
+    border-top: hidden;
+    border-left: hidden;
+    border-bottom: hidden;
+    border-right: hidden;
+    margin-bottom: 0;
+}
+
+.CheckRow {
+    width: 5%;
+    text-align: center;
+}
+
+.ItemRow {
+    width: 20%;
+}
+
+.SourceRow {
+}
+
+#RewardContainer {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+#RewardText {
+    background-color: #F8F5F0;
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight:bold;
+    padding: 6px;
+    border-radius: 10px;
+    border-color: #DFD7CA;
+    border-style: solid;
+    border-width: 2px;
+    color: #616A6B;
+}

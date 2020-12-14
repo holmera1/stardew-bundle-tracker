@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { Table, Container, Form } from "react-bootstrap";
+import './components.css';
 const { ipcRenderer } = window.require('electron');
+
 
 export const Bundle = (props) => {
 
@@ -49,38 +51,36 @@ export const Bundle = (props) => {
     }, [])
     
     return (
-        <Container style={{ paddingTop: '15px', paddingBottom: '5px', marginBottom: '20px', backgroundColor: '#F8F5F0', borderRadius: '25px',
-        borderColor: '#DFD7CA', borderStyle: 'solid', borderWidth: '2px', }}>
-            <div style={{paddingLeft: '5px', paddingRight: '5px'}}>
-                <div style={{marginBottom: '2px'}}>
-                    <img src={imageName.default} alt={''} style={{display: 'inline-block', verticalAlign: 'bottom', width: '40px', height: 'auto'}}/>
-                    <p style={{display: 'inline-block', fontWeight: 'bold', fontSize: '20px', fontFamily: 'Roboto', margin: '0', color: '#616A6B'}}>
-                        &nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
+        <Container id="BundleContainer">
+            <div>
+                <div id="BundleHeader">
+                    <img id="BundleHeaderImg" src={imageName.default} alt=""/>
+                    <p id="BundleHeaderText">&nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
                 </div>
-                <Table bordered hover striped size="sm" variant="dark">
+                <Table hover bordered striped size="sm" id="Table" variant="dark">
                     <thead>
                         <tr>
-                            <th style={{width: '5%', textAlign: 'center'}}>&#10003;</th>
-                            <th style={{width: '15%'}}>Item</th>
-                            <th>Source</th>
+                            <th className="CheckRow">&#10003;</th>
+                            <th className="ItemRow">Item</th>
+                            <th className="SourceRow">Source</th>
                         </tr>
                     </thead>
                     <tbody>
                     {itemData[props.bundle].items.map((item, i) => {
                         return (
                             <tr key={i}>
-                                <th style={{width: '5%', textAlign: 'center'}}>
+                                <th className="CheckRow">
                                     <Form.Check name={i} type="checkbox" onChange={handleClick} checked={itemState.items[i] ? itemState.items[i] : false}/>
                                 </th>
-                                <th style={{width: '15%'}}><a href={item.link} target="_blank">{item.name}</a></th>
-                                <th>{item.source}</th>
+                                <th className="ItemRow"><a href={item.link} target="_blank">{item.name}</a></th>
+                                <th className="SourceRow">{item.source}</th>
                             </tr>
                         )
                     })}
                         <tr>
-                            <th style={{width: '5%'}}></th>
-                            <th style={{width: '15%'}}>Reward</th>
-                            <th>{itemData[props.bundle].reward}</th>
+                            <th className="CheckRow"></th>
+                            <th className="ItemRow">Reward</th>
+                            <th className="SourceRow">{itemData[props.bundle].reward}</th>
                         </tr>
                     </tbody>
                 </Table>

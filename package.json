@@ -2,7 +2,7 @@
     "name": "stardew-tracker",
     "author": "Robert Holmes",
     "description": "Stardew Valley bundle tracker desktop application",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "main": "src/Main.js",
     "homepage": "./",
     "private": true,
@@ -22,13 +22,12 @@
         "use-force-update": "^1.0.7"
     },
     "scripts": {
-        "start": "nf start -p 3000",
+        "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "electron": "electron .",
         "electron-start": "node src/start-react",
-        "react-start": "react-scripts start",
         "package": "electron-forge package",
         "make": "electron-forge make",
         "publish": "electron-forge publish"

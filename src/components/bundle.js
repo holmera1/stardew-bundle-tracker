@@ -10,8 +10,10 @@ export const Bundle = (props) => {
 
     let imageName = require(`../images/${itemData[props.bundle].img}.png`);
 
+    // tracks whether each item is checked or unchecked
     const [itemState, setItemState] = useState({items: []});
 
+    // executes when user checks/unchecks a box
     const handleClick = (event) => {
         let itemIdx = event.target.name;
         ipcRenderer.send('data', props.bundle, itemIdx);
@@ -22,6 +24,7 @@ export const Bundle = (props) => {
         });
     }
 
+    // counts number of items checked per bundle
     const countItems = () => {
         let count = 0;
         for(let i = 0; i < itemState.items.length; i++) {
@@ -35,6 +38,7 @@ export const Bundle = (props) => {
         return count;
     }
 
+    // called in useEffect to initialize itemState variable
     const getDataAsync = async () => {
         let tmp = [];
         for(let i = 0; i < itemData[props.bundle].items.length; i++) {

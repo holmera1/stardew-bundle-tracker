@@ -15,9 +15,8 @@ const createWindow = () => {
             nodeIntegration: true
         }
     });
-    // used for development purposes
-    mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
-    //mainWindow.loadURL('http://localhost:3000');
+    //mainWindow.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
+    mainWindow.loadURL('http://localhost:3000');
     mainWindow.setMenu(null);
     //mainWindow.toggleDevTools();
     mainWindow.webContents.on("new-window", function(event, url) {

@@ -14,7 +14,9 @@ This desktop application is designed for Stardew Valley players to help them tra
 
 ## How to Use
 
-Use the tabs at the top of the window to navigate between Community Center rooms. Click the checkbox next to the items as you collect them. Clicking on an item will take you to that item's wiki page. When relauching the app after exiting, progress from when the application was last closed will be automatically restored. If you wish to reset all of the checkboxes to the unchecked state, click the 'Reset All' button at the very bottom of the window. 
+Use the tabs at the top of the window to navigate between Community Center rooms. Click the checkbox next to the items as you collect them. Clicking on an item will take you to that item's wiki page. When relauching the app after exiting, progress from when the application was last closed will be automatically restored. If you wish to reset all of the checkboxes to the unchecked state, click the 'Reset All' button at the very bottom of the window.
+
+Note: Currently, this application only features the default Community Center, not the remixed bundles. While I do not currently have the time to add support for farms created with this setting enabled, I will do so when I am able!
 
 ## Thank you!
 

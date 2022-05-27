@@ -1,65 +1,45 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { Table, Container, Form } from "react-bootstrap";
 import './components.css';
 const { ipcRenderer } = window.require('electron');
 
 
 export const Bundle = (props) => {
+    const itemData = require('../itemData.json');
+    const imageName = require(`../images/${itemData[props.bundle].img}.png`);
+    const [itemState, setItemState] = useState({ items: [] });
 
-    let itemData = require('../itemData.json');
+    const countItems = useMemo(() => {
+        const count = itemState.items.reduce((acc, curr) => curr ? ++acc : acc, 0);
+        return count > itemData[props.bundle].count ? itemData[props.bundle].count : count;
+    }, [itemData, itemState, props.bundle]);
 
-    let imageName = require(`../images/${itemData[props.bundle].img}.png`);
-
-    // tracks whether each item is checked or unchecked
-    const [itemState, setItemState] = useState({items: []});
-
-    // executes when user checks/unchecks a box
-    const handleClick = (event) => {
-        let itemIdx = event.target.name;
+    const handleClick = useCallback((event) => {
+        const itemIdx = parseInt(event.target.name);
         ipcRenderer.send('data', props.bundle, itemIdx);
-        let tmp = itemState.items;
-        tmp[itemIdx] = !itemState.items[itemIdx];
         setItemState({
-            items: tmp
+            items: itemState.items.map((item, i) => i === itemIdx ? !item : item)
         });
-    }
-
-    // counts number of items checked per bundle
-    const countItems = () => {
-        let count = 0;
-        for(let i = 0; i < itemState.items.length; i++) {
-            if(itemState.items[i]) {
-                count++;
-            }
-        }
-        if(count > itemData[props.bundle].count) {
-            return itemData[props.bundle].count;
-        }
-        return count;
-    }
-
-    // called in useEffect to initialize itemState variable
-    const getDataAsync = async () => {
-        let tmp = [];
-        for(let i = 0; i < itemData[props.bundle].items.length; i++) {
-            let result = await ipcRenderer.invoke('get', props.bundle, i);
-            tmp[i] = result;
-        }
-        setItemState({
-            items: tmp
-        });
-    }
+    }, [itemState, props.bundle]);
 
     useEffect(() => {
+        const getDataAsync = async () => {
+            const storedItemState = await Promise.all(itemData[props.bundle].items.map(
+                async (__, i) => await ipcRenderer.invoke('get', props.bundle, i)
+            ));
+            setItemState({
+                items: storedItemState
+            });
+        }
         getDataAsync();
-    }, [])
-    
+    }, [itemData, props.bundle])
+
     return (
         <Container id="BundleContainer">
             <div>
                 <div id="BundleHeader">
-                    <img id="BundleHeaderImg" src={imageName.default} alt=""/>
-                    <p id="BundleHeaderText">&nbsp;{props.name} ({countItems()}/{itemData[props.bundle].count})</p>
+                    <img id="BundleHeaderImg" src={imageName.default} alt="" />
+                    <p id="BundleHeaderText">&nbsp;{props.name} ({countItems}/{itemData[props.bundle].count})</p>
                 </div>
                 <Table hover bordered striped size="sm" id="Table" variant="dark">
                     <thead>
@@ -70,17 +50,17 @@ export const Bundle = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                    {itemData[props.bundle].items.map((item, i) => {
-                        return (
-                            <tr key={i}>
-                                <th className="CheckRow">
-                                    <Form.Check name={i} type="checkbox" onChange={handleClick} checked={itemState.items[i] ? itemState.items[i] : false}/>
-                                </th>
-                                <th className="ItemRow"><a href={item.link} target="_blank">{item.name}</a></th>
-                                <th className="SourceRow">{item.source}</th>
-                            </tr>
-                        )
-                    })}
+                        {itemData[props.bundle].items.map((item, i) => {
+                            return (
+                                <tr key={i}>
+                                    <th className="CheckRow">
+                                        <Form.Check name={i} type="checkbox" onChange={handleClick} checked={itemState.items[i] ? itemState.items[i] : false} />
+                                    </th>
+                                    <th className="ItemRow"><a href={item.link} target="_blank" rel="noreferrer">{item.name}</a></th>
+                                    <th className="SourceRow">{item.source}</th>
+                                </tr>
+                            )
+                        })}
                         <tr>
                             <th className="CheckRow"></th>
                             <th className="ItemRow">Reward</th>

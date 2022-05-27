@@ -16,7 +16,7 @@ export const CommunityCenter = () => {
 
     return (
         <div>
-            <Tabs id="RoomTabs" defaultActiveKey="crafts" id="uncontrolled-tab-example" transition={false} style={{borderBottom: 0}}>
+            <Tabs id="RoomTabs" defaultActiveKey="crafts" transition={false} style={{ borderBottom: 0 }}>
                 <Tab eventKey="crafts" title="Crafts Room" className="Room">
                     <Reward link={itemData.craftsRewardLink} reward={itemData["craftsReward"]} />
                     <Bundle name={"Spring Foraging Bundle"} bundle={"crafts1"}></Bundle>
@@ -70,8 +70,8 @@ export const CommunityCenter = () => {
                     <Bundle name={"The Missing Bundle"} bundle={"joja"}></Bundle>
                 </Tab>
             </Tabs>
-            <div className="Tail" style={{paddingTop: '15px'}}>
-                <img id="Logo" src={imageName.default} alt=""/>
+            <div className="Tail" style={{ paddingTop: '15px' }}>
+                <img id="Logo" src={imageName.default} alt="" />
             </div>
             <div className="Tail">
                 <Button id="ResetButton" onClick={handleClear} variant="success">Reset All</Button>
